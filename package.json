@@ -5,9 +5,11 @@
     "prisma": {
     "seed": "node prisma/seed.js"
     },
-  "scripts": {
-    "dev": "node --watch server.js"
-  },
+ "scripts": {
+  "dev": "node --watch server.js",
+  "postinstall": "prisma generate",
+  "build": "prisma generate"
+},
   "dependencies": {
     "@prisma/adapter-mariadb": "^7.9.1",
     "@prisma/adapter-pg": "^7.10.1",
